@@ -1,6 +1,6 @@
 {
   "name": "@mrozio/wcwidth",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Port of C's wcwidth.",
   "sideEffects": false,
   "type": "module",
