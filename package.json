@@ -1,0 +1,56 @@
+{
+  "name": "@mrozio/wcwidth",
+  "version": "0.0.0",
+  "description": "Port of C's wcwidth.",
+  "sideEffects": false,
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "repository": "mrozio13pl/wcwidth",
+  "author": "mrozio13pl",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "c8 uvu",
+    "release": "release-it",
+    "publish": "clean-publish"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "string",
+    "width",
+    "terminal"
+  ],
+  "devDependencies": {
+    "@mrozio/eslint-config": "^1.0.3",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@types/node": "^20.10.5",
+    "c8": "^8.0.1",
+    "clean-publish": "^4.2.0",
+    "eslint": "^8.56.0",
+    "publint": "^0.2.7",
+    "release-it": "^17.0.1",
+    "rollup": "^4.9.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
+    "uvu": "^0.5.6"
+  },
+  "c8": {
+    "exclude": [
+      "**/*.test.*"
+    ],
+    "lines": 75,
+    "check-coverage": true
+  }
+}
